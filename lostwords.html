@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Expedition's Lost Words</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Project Heading -->
+        <header class="header">
+            <h1>The Expedition's Lost Words</h1>
+
+            <p>
+                Discover hidden words in the damaged communication panel
+                using recursion and backtracking.
+            </p>
+        </header>
+
+
+        <!-- Input Section -->
+        <main>
+
+            <section class="input-section">
+
+                <h2>Enter Expedition Data</h2>
+
+                <form id="searchForm">
+
+                    <!-- Grid Input -->
+                    <div class="input-group">
+
+                        <label for="gridInput">
+                            Letter Grid
+                        </label>
+
+                        <textarea
+                            id="gridInput"
+                            rows="5"
+                            placeholder="Enter each row on a new line&#10;oaan&#10;etae&#10;ihkr&#10;iflv"
+                            required></textarea>
+
+                        <small>
+                            Enter lowercase letters. Each line represents
+                            one row of the grid.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Dictionary Input -->
+                    <div class="input-group">
+
+                        <label for="dictionaryInput">
+                            Dictionary Words
+                        </label>
+
+                        <textarea
+                            id="dictionaryInput"
+                            rows="5"
+                            placeholder="Enter words separated by commas or new lines&#10;oath, pea, eat, rain"
+                            required></textarea>
+
+                        <small>
+                            Enter candidate words separated by commas
+                            or new lines.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Action Buttons -->
+                    <div class="button-group">
+
+                        <button type="submit" id="searchButton">
+                            Search Words
+                        </button>
+
+                        <button type="button" id="exampleButton">
+                            Load Example
+                        </button>
+
+                        <button type="reset" id="clearButton">
+                            Clear All
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- Grid Display Section -->
+            <section class="grid-section">
+
+                <h2>Communication Panel</h2>
+
+                <p>
+                    The letter grid will appear below.
+                    Select a discovered word to view its path.
+                </p>
+
+                <div id="gridDisplay" class="grid-display"
+                     role="grid"
+                     aria-label="Letter grid">
+
+                    <!-- JavaScript generates grid cells here -->
+
+                </div>
+
+            </section>
+
+
+            <!-- Search Status -->
+            <section class="status-section">
+
+                <h2>Search Status</h2>
+
+                <p id="searchStatus" role="status" aria-live="polite">
+                    Waiting for expedition data...
+                </p>
+
+            </section>
+
+
+            <!-- Results Section -->
+            <section class="results-section">
+
+                <h2>Recovered Words</h2>
+
+                <div id="resultsContainer">
+
+                    <!-- JavaScript displays found words here -->
+
+                    <p>No words discovered yet.</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Path Display Section -->
+            <section class="path-section">
+
+                <h2>Discovered Word Path</h2>
+
+                <p id="selectedWord">
+                    Select a recovered word to view its path.
+                </p>
+
+                <div id="pathDisplay">
+
+                    <!-- JavaScript displays coordinates here -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+
+            <p>
+                The Expedition's Lost Words |
+                Recursion • Backtracking • Prefix Search
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
